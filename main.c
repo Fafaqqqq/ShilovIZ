@@ -9,5 +9,6 @@ int main()
 
 
     deinitCatalog();
+    deinitReestr();
     return 0;
 }

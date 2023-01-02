@@ -1,5 +1,7 @@
 #include "catalog.h"
-#include "consts.h"
+
+const char* CATALOG_FILE = "Catalog.txt";
+// const char* FILE_ACCESS = "r";
 
 typedef struct {
 	char short_name[21];
@@ -27,7 +29,7 @@ int initCatalog() {
 
 	catalog = (Catalog*)malloc(sizeof(Catalog));
 
-	FILE* catalog_file = fopen(CATALOG_FILE, FILES_ACCESS);
+	FILE* catalog_file = fopen(CATALOG_FILE, "r");
 
 	if (!catalog_file) {
 		return -1;
